@@ -1,0 +1,14 @@
+{
+  "name": "socialsync-media-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "deploy": "wrangler deploy", "dev": "wrangler dev", "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@cloudflare/workers-types": "5.20261117.1", "typescript": "5.9.3", "wrangler": "4.164.0" },
+  "cloudflare": {
+    "bindings": {
+      "MEDIA": { "description": "Your private R2 bucket for SocialSync originals. Keep public access disabled." },
+      "MEDIA_SIGNING_SECRET": { "description": "Paste the connection secret generated in SocialSync Workspace settings > Media storage. Do not reuse another workspace's secret." },
+      "APP_ORIGINS": { "description": "The exact SocialSync origin shown in Workspace settings. Multiple origins can be separated with commas." }
+    }
+  }
+}

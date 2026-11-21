@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "socialsync-media-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-21",
+  "workers_dev": true,
+  "preview_urls": false,
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "socialsync-media" }],
+  "vars": {
+    "APP_ORIGINS": "https://socialsync-kappa-rosy.vercel.app",
+    "ALLOWED_IMPORT_HOSTS": "api.apify.com,*.apifyusercontent.com,*.tiktokcdn.com,*.tiktokcdn-us.com,*.cdninstagram.com,*.fbcdn.net,*.akamaized.net"
+  }
+}
